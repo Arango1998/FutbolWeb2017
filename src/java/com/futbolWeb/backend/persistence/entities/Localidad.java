@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Localidad.findAll", query = "SELECT l FROM Localidad l"),
     @NamedQuery(name = "Localidad.findByIdLocalidad", query = "SELECT l FROM Localidad l WHERE l.idLocalidad = :idLocalidad"),
     @NamedQuery(name = "Localidad.findByNombreLocalidad", query = "SELECT l FROM Localidad l WHERE l.nombreLocalidad = :nombreLocalidad")})
-public class Localidad implements Serializable {
+public class Localidad implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -125,5 +125,10 @@ public class Localidad implements Serializable {
     public String toString() {
         return "com.futbolWeb.backend.persistence.entities.Localidad[ idLocalidad=" + idLocalidad + " ]";
     }
-    
+
+    @Override
+    public String obtenerLlavePrimaria() {
+        return idLocalidad.toString();
+    }
+
 }

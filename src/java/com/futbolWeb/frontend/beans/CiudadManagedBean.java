@@ -8,6 +8,7 @@ package com.futbolWeb.frontend.beans;
 import com.futbolWeb.backend.persistence.entities.Ciudad;
 import com.futbolWeb.backend.persistens.facades.CiudadFacadeLocal;
 import java.io.Serializable;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -57,4 +58,9 @@ public class CiudadManagedBean implements Serializable {
         }
     }
 
+    public List<Ciudad> listarCiudad(){
+    
+        return ciudadfl.findAll();
+    
+    }
 }
