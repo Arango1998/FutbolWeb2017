@@ -189,5 +189,7 @@ public class Jugador implements Serializable, IDTO {
     public String obtenerLlavePrimaria() {
     return idUsuario.toString();
     }
+
+  
     
 }

@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Rol.findAll", query = "SELECT r FROM Rol r"),
     @NamedQuery(name = "Rol.findByIdTipoRol", query = "SELECT r FROM Rol r WHERE r.idTipoRol = :idTipoRol"),
     @NamedQuery(name = "Rol.findByNombreRol", query = "SELECT r FROM Rol r WHERE r.nombreRol = :nombreRol")})
-public class Rol implements Serializable, IEntity {
+public class Rol implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -131,10 +131,11 @@ public class Rol implements Serializable, IEntity {
     }
 
     @Override
-    public String getPK() {
+    public String obtenerLlavePrimaria() {
     return idTipoRol.toString();
-    
     }
+
+  
 
     
     

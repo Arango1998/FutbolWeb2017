@@ -1,27 +1,30 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-
-        <f:view>
-
-
-            <h:form>
-                <h1><h:outputText value="Create/Edit"/></h1>
-                <h:panelGrid columns="2">
-                    
-                    <h:outputLabel value="NombreCategoria:" for="nombreCategoria" />
-                    <h:inputText id="nombreCategoria" value="#{categoriaManagedBean.categoria.nombreCategoria}" title="NombreCategoria" required="true" requiredMessage="The NombreCategoria field is required."/>
-                </h:panelGrid>
-                <h:commandButton value="Registrar Categotia" action="#{categoriaManagedBean.registrarCategoria()}"/>
-            </h:form>
-        </f:view>
-
-    </h:body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Inicio Pagina</title>
+        <link rel="shortcut icon" href="recursos/images/paginainicio/logourl.jpg" type="image/x-icon"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+            <link href="recursos/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+            <link href="recursos/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+            <link href="recursos/css/iniciopagina.css" rel="stylesheet" type="text/css"/>
+            
+    </head>
+    <body>
+       <center>
+		<ul class="social-network social-circle">
+			<li><a href="#" class="icoLinkedin"><i class="fa fa-linked"> <img src="recursos/images/paginainicio/Logo.png" alt="Imagen iconica del sistema"/></i></a></li>
+		</ul>               
+	</center>
+	<div class="espacio"></div>
+	<center>
+		<div class="col-md-2 col-sm-5 text-center fh5co-link-wrap">
+			<p><a href="index.html" class="btn btn-outline  btn-warning">Español</a></p>
+		</div>
+		<div class="col-md-2 col-md-push-7 ">
+			<p><a href="indexEnglish.html" class="btn btn-outline  btn-danger">Ingles</a></p>
+		</div>
+	</center>
+    </body>
 </html>
-

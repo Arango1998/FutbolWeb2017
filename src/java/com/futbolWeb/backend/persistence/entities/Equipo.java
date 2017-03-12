@@ -166,7 +166,9 @@ public class Equipo implements Serializable, IDTO {
 
     @Override
     public String obtenerLlavePrimaria() {
+        
     return idEquipo.toString();
     }
-    
+
+   
 }
