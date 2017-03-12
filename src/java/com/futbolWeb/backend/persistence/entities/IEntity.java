@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.futbolWeb.frontend.utilities.converters;
+package com.futbolWeb.backend.persistence.entities;
 
 /**
  *
  * @author Cristian Suesca
  */
-public class UsuarioConverter {
-    
+public  interface  IEntity {
+    String getPK();
 }
+

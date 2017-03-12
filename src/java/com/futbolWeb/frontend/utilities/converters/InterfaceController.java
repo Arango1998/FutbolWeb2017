@@ -9,6 +9,8 @@ package com.futbolWeb.frontend.utilities.converters;
  *
  * @author Cristian Suesca
  */
+
+
 public interface InterfaceController<T>{
     
     T getObjectByKey(Integer key);

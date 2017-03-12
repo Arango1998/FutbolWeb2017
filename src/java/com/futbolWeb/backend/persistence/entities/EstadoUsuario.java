@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "EstadoUsuario.findAll", query = "SELECT e FROM EstadoUsuario e"),
     @NamedQuery(name = "EstadoUsuario.findByIdEstado", query = "SELECT e FROM EstadoUsuario e WHERE e.idEstado = :idEstado"),
     @NamedQuery(name = "EstadoUsuario.findByNombreEstado", query = "SELECT e FROM EstadoUsuario e WHERE e.nombreEstado = :nombreEstado")})
-public class EstadoUsuario implements Serializable {
+public class EstadoUsuario implements Serializable, IEntity{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -112,5 +112,13 @@ public class EstadoUsuario implements Serializable {
     public String toString() {
         return "com.futbolWeb.backend.persistence.entities.EstadoUsuario[ idEstado=" + idEstado + " ]";
     }
+
+    @Override
+    public String getPK() {
+        
+    return idEstado.toString();
+    }
+
+ 
     
 }

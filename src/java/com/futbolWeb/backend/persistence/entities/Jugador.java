@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Jugador.findAll", query = "SELECT j FROM Jugador j"),
     @NamedQuery(name = "Jugador.findByIdUsuario", query = "SELECT j FROM Jugador j WHERE j.idUsuario = :idUsuario"),
     @NamedQuery(name = "Jugador.findByPosicion", query = "SELECT j FROM Jugador j WHERE j.posicion = :posicion")})
-public class Jugador implements Serializable {
+public class Jugador implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -183,6 +183,11 @@ public class Jugador implements Serializable {
     @Override
     public String toString() {
         return "com.futbolWeb.backend.persistence.entities.Jugador[ idUsuario=" + idUsuario + " ]";
+    }
+
+    @Override
+    public String obtenerLlavePrimaria() {
+    return idUsuario.toString();
     }
     
 }

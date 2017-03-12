@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Usuario.findByEps", query = "SELECT u FROM Usuario u WHERE u.eps = :eps"),
     @NamedQuery(name = "Usuario.findByTelefono", query = "SELECT u FROM Usuario u WHERE u.telefono = :telefono"),
     @NamedQuery(name = "Usuario.findByEmail", query = "SELECT u FROM Usuario u WHERE u.email = :email")})
-public class Usuario implements Serializable, IDTO {
+public class Usuario implements Serializable, IEntity {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -316,8 +316,10 @@ public class Usuario implements Serializable, IDTO {
     }
 
     @Override
-    public String obtenerLlavePrimaria() {
+    public String getPK() {
     return documento.toString();
     }
+
+  
     
 }
