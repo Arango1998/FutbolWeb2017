@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author Cristian Suesca
  */
 @Stateless
-public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFacadeLocal {
+public class UsuarioFacade extends AbstractFacade<Usuario>{
 
     @PersistenceContext(unitName = "FutbolWebPU")
     private EntityManager em;

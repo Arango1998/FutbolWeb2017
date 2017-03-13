@@ -113,6 +113,10 @@ public class EstadoUsuario implements Serializable, IDTO{
         return "com.futbolWeb.backend.persistence.entities.EstadoUsuario[ idEstado=" + idEstado + " ]";
     }
 
+  
+
+    
+
     @Override
     public String obtenerLlavePrimaria() {
     return idEstado.toString();
