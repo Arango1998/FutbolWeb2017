@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Item.findByIdItems", query = "SELECT i FROM Item i WHERE i.idItems = :idItems"),
     @NamedQuery(name = "Item.findByCantidadItems", query = "SELECT i FROM Item i WHERE i.cantidadItems = :cantidadItems"),
     @NamedQuery(name = "Item.findByItemsAprobados", query = "SELECT i FROM Item i WHERE i.itemsAprobados = :itemsAprobados")})
-public class Item implements Serializable {
+public class Item implements Serializable, IDTO {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -146,6 +146,11 @@ public class Item implements Serializable {
     @Override
     public String toString() {
         return "com.futbolWeb.backend.persistence.entities.Item[ idItems=" + idItems + " ]";
+    }
+
+    @Override
+    public String obtenerLlavePrimaria() {
+        return idItems.toString();
     }
     
 }
