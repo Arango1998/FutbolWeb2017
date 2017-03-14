@@ -9,9 +9,9 @@ import com.futbolWeb.backend.persistence.entities.Barrio;
 import javax.faces.convert.FacesConverter;
 
 @FacesConverter(forClass = Barrio.class)
-public class BarrioController extends AbstractConverter {
+public class BarrioConverter extends AbstractConverter {
 
-    public BarrioController() {
+    public BarrioConverter() {
 
         this.nameManagedBean = "barrioManagedBean";
     }
