@@ -5,7 +5,7 @@
  */
 package com.futbolWeb.backend.persistens.facades;
 
-import com.futbolWeb.backend.persistence.entities.Categoria;
+import com.futbolWeb.backend.persistence.entities.Usuario;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,19 +14,19 @@ import javax.ejb.Local;
  * @author camila
  */
 @Local
-public interface CategoriaFacadeLocal {
+public interface UsuarioFacadeLocal {
 
-    void create(Categoria categoria);
+    void create(Usuario usuario);
 
-    void edit(Categoria categoria);
+    void edit(Usuario usuario);
 
-    void remove(Categoria categoria);
+    void remove(Usuario usuario);
 
-    Categoria find(Object id);
+    Usuario find(Object id);
 
-    List<Categoria> findAll();
+    List<Usuario> findAll();
 
-    List<Categoria> findRange(int[] range);
+    List<Usuario> findRange(int[] range);
 
     int count();
     

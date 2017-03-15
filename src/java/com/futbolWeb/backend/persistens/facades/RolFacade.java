@@ -12,10 +12,10 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Cristian Suesca
+ * @author camila
  */
 @Stateless
-public class RolFacade extends AbstractFacade<Rol> {
+public class RolFacade extends AbstractFacade<Rol> implements RolFacadeLocal {
 
     @PersistenceContext(unitName = "FutbolWebPU")
     private EntityManager em;

@@ -3,58 +3,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
     <body>
 
         <ui:composition template="./../../WEB-INF/templates/template.xhtml">
 
             <ui:define name="content">
-                <h:form>
-                    <h1><h:outputText value="List"/></h1>
-                    <h:dataTable value="#{torneoManagedBean.listarTorneo()}" var="item">
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="IdTorneo"/>
-                            </f:facet>
-                            <h:outputText value="#{item.idTorneo}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="NombreTorneo"/>
-                            </f:facet>
-                            <h:outputText value="#{item.nombreTorneo}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="Organizador"/>
-                            </f:facet>
-                            <h:outputText value="#{item.organizador}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="DatosContactoOrganizador"/>
-                            </f:facet>
-                            <h:outputText value="#{item.datosContactoOrganizador}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="FechaInicio"/>
-                            </f:facet>
-                            <h:outputText value="#{item.fechaInicio}">
+                <f:view>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Create/Edit"/></h1>
+                        <p:panelGrid columns="2">
+                            <p:outputLabel value="NombreTorneo:" for="nombreTorneo" />
+                            <p:inputText id="nombreTorneo" value="#{torneoManagedBean.torneo.nombreTorneo}" title="NombreTorneo" required="true" requiredMessage="The NombreTorneo field is required."/>
+                            
+                            <p:outputLabel value="Organizador:" for="organizador" />
+                            <p:inputText id="organizador" value="#{torneoManagedBean.torneo.organizador}" title="Organizador" required="true" requiredMessage="The Organizador field is required."/>
+                            
+                            <p:outputLabel value="DatosContactoOrganizador:" for="datosContactoOrganizador" />
+                            <p:inputTextarea rows="4" cols="30" id="datosContactoOrganizador" value="#{torneoManagedBean.torneo.datosContactoOrganizador}" title="DatosContactoOrganizador" required="true" requiredMessage="The DatosContactoOrganizador field is required."/>
+                            
+                            <p:outputLabel value="FechaInicio" for="fechaInicio"/>
+                            <p:calendar id="fechaInicio" value="#{torneoManagedBean.torneo.fechaInicio}"/>
+                            
+                            <p:outputLabel value="FechaFin:" for="fechaFin" />
+                            <p:inputText id="fechaFin" value="#{torneoManagedBean.torneo.fechaFin}" title="FechaFin" required="true" requiredMessage="The FechaFin field is required.">
                                 <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
-                            </h:outputText>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="FechaFin"/>
-                            </f:facet>
-                            <h:outputText value="#{item.fechaFin}">
-                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
-                            </h:outputText>
-                        </h:column>
-                    </h:dataTable>
-                </h:form>
+                            </p:inputText>
+                        </p:panelGrid>
+                        <h:commandButton value="Registrar" action="#{torneoManagedBean.registrarTorneo()}"/>
+                    </h:form>
+                </f:view>
+
             </ui:define>
 
         </ui:composition>
