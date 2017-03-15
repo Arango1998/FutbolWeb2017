@@ -27,6 +27,7 @@ nav{
 	-webkit-transition: margin-left .5s;
 }
 
+
 ul{
 	display: block;
 	float: left;
@@ -35,7 +36,7 @@ ul{
 
 ul li{
 	float: left;
-	margin: 10px;
+	margin: 7px;
 	
 }
 
@@ -46,12 +47,13 @@ ul a{
 }
 section#banner{
 	width: 100%;
-	background-image: url(../images/paginainicio/imagenPrincipal.jpg);
+	height: 100%;
+	background-image: url(../images/paginainicio/cheer-in-black.jpg);
 	background-size: 100%;
 	background-attachment: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100%;
+
 
 }
 
@@ -65,25 +67,26 @@ img#logo{
 }
 
 #jumbotronNosotros{
-	background-image: url(../images/paginainicio/nosotros.jpg);
+	width: 100%;
 	height: 200px;
-	background-repeat: no-repeat;
-	background-size: 100%; 
-	background-attachment: fixed; 
+	background-image: url(../../images/paginainicio/nosotros.jpg); 
+        
+        background-attachment: fixed; 
+	background-size: 100% 1000px; 
 }
 #jumbotronConvocatoria{
-	background-image: url(../images/paginainicio/convocatoria.jpg);
+	width: 100%;
 	height: 200px;
-	background-repeat: no-repeat;
-	background-size: 100%; 
+	background-image: url(../images/paginaInicio/convocatoria.jpg); 
+	background-size: 100% 1000px; 
 }
 #jumbotronTorneo{
 
-	background-image: url(../images/paginainicio/torneo.jpg);
-	height:100%;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-attachment: fixed; 
+	width: 100%;
+	height: 200px;
+	background-image: url(../images/paginaInicio/torneo.jpg); 
+        background-attachment: fixed; 
+	background-size: 100% 1000px; 
 }
 #carrousel{
 	width: 100%;
@@ -98,28 +101,31 @@ p.tituloJumbo{
 	
 }
 #nosotro {
+    
 	width: 100%;
 	height:auto;
 }
 .nosotros {
 	width: 100%;
 	height: auto;
-	background-image: url(../images/paginainicio/nosotros.jpg);
+	background-color:#000;
 	padding: 20px;
 }
 #torneos {
 	width: 100%;
-	height: 600px;
-	background-color:yellow; 
+	height: 100%;
 	
-	background-size: 100% 1000px; 
 
 }
 footer{
 	width: 100%;
-	height: 100px;
+	height: 100%;
 	padding: 30px;
-	background-color: black;
-	color:#eee;
+	background-image: url(../images/paginaInicio/torneo.jpg);
+	
 	float: right;
+}
+p.foot{
+    color:#e0e0e0;
+    
 }
