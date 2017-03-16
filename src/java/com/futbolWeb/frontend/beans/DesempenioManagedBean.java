@@ -50,6 +50,18 @@ public class DesempenioManagedBean implements Serializable, InterfaceController<
         desempeniofl.create(desempenio);
     }
     
+    public void modificarDesempenio(){
+        desempeniofl.edit(desempenio);
+    }
+    
+    public void eliminarDesempenio(Desempenio d){
+        desempeniofl.remove(desempenio);
+    }
+    
+    public String actualizarDesempanio(Desempenio des){
+        desempenio = des;
+        return "";
+    }
     
     public List<Desempenio> listarDesempenio(){
         return desempeniofl.findAll();

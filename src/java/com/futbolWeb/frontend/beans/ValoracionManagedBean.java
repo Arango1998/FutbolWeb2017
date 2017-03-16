@@ -49,6 +49,19 @@ public class ValoracionManagedBean implements Serializable, InterfaceController<
         valoracionfl.create(valoracion);
     }
     
+    public void modificarValoracion(){
+        valoracionfl.edit(valoracion);
+    }
+    
+    public void eliminarValoracion(Valoracion v){
+        valoracionfl.remove(valoracion);
+    }
+    
+    public String actualizarValoracion(Valoracion val){
+        valoracion = val;
+        return "";
+    }
+    
     public List<Valoracion> listarValoracion(){
         return valoracionfl.findAll();
     }

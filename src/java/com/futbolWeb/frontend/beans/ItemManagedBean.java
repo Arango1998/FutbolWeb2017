@@ -49,6 +49,19 @@ public class ItemManagedBean implements Serializable, InterfaceController<Item> 
         itemfl.create(item);
     }
     
+    public void modificarItem(){
+        itemfl.edit(item);
+    }
+    
+    public void eliminarItem(Item it){
+        itemfl.remove(item);
+    }
+    
+    public String actualizarItem(Item ite){
+        item = ite;
+        return "";
+    }
+    
     
     public List<Item> listarItem(){
         return itemfl.findAll();

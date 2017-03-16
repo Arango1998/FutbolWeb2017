@@ -49,6 +49,19 @@ public class PosicionSeguimientoManagedBean implements Serializable, InterfaceCo
         psfl.create(posicionseguimiento);
     }
     
+    public void modificarPosicionSeguimiento(){
+        psfl.edit(posicionseguimiento);
+    }
+    
+    public void eliminarPosicionSeguimiento(PosicionSeguimiento ps){
+        psfl.remove(posicionseguimiento);
+    }
+    
+    public String actualizarPosicionSeguimiento(PosicionSeguimiento posseg){
+        posicionseguimiento = posseg;
+        return "";
+    }
+    
     public List<PosicionSeguimiento> listarPosicionSeguimiento(){
         return psfl.findAll();
     }

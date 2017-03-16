@@ -49,6 +49,18 @@ public class SeguimientoManagedBean implements Serializable, InterfaceController
         seguimientofl.create(seguimiento);
     }
     
+    public void modificarSeguimiento(){
+        seguimientofl.edit(seguimiento);
+    }
+    
+    public void eliminarSeguimiento(Seguimiento s){
+        seguimientofl.remove(seguimiento);
+    }
+    
+    public String actualizarSeguimiento(Seguimiento seg){
+        seguimiento = seg;
+        return "";
+    }
     
     public List<Seguimiento> listarSeguimiento(){
         return seguimientofl.findAll();
